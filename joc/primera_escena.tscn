@@ -1,0 +1,87 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://jugador/personatge.tscn" type="PackedScene" id=1]
+[ext_resource path="res://mapa.tscn" type="PackedScene" id=2]
+[ext_resource path="res://clau.tscn" type="PackedScene" id=3]
+[ext_resource path="res://fons.tscn" type="PackedScene" id=4]
+[ext_resource path="res://enemic/Enemic.tscn" type="PackedScene" id=5]
+[ext_resource path="res://enemic/Enemic2.tscn" type="PackedScene" id=9]
+[ext_resource path="res://ambient/49470a8ac53138b1e9a20e71ebbd1a17-removebg-preview.png" type="Texture" id=11]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="porta" type="Area2D" parent="."]
+position = Vector2( 0, -1 )
+collision_layer = 131072
+collision_mask = 262144
+
+[node name="49470a8ac53138b1e9a20e71ebbd1a17-removebg-preview" type="Sprite" parent="porta"]
+show_behind_parent = true
+position = Vector2( 7264, -304 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 11 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="porta"]
+polygon = PoolVector2Array( 7232, -256, 7232, -328, 7232, -336, 7232, -344, 7240, -344, 7240, -352, 7248, -352, 7288, -352, 7288, -344, 7296, -344, 7296, -336, 7304, -336, 7304, -256 )
+
+[node name="StaticBody2D" parent="." instance=ExtResource( 2 )]
+position = Vector2( -376, -40 )
+collision_layer = 2
+collision_mask = 15
+
+[node name="clau" parent="." instance=ExtResource( 3 )]
+position = Vector2( 3104, -32 )
+scale = Vector2( 0.1, 0.1 )
+script = null
+
+[node name="clau2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 4368, 96 )
+scale = Vector2( 0.1, 0.1 )
+script = null
+
+[node name="clau3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 6464, -152 )
+scale = Vector2( 0.1, 0.1 )
+script = null
+
+[node name="personatge" parent="." instance=ExtResource( 1 )]
+position = Vector2( 192, -32 )
+scale = Vector2( 0.75, 0.75 )
+
+[node name="enemic" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1144, 16 )
+scale = Vector2( 0.2, 0.2 )
+
+[node name="enemic2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 2352, -184 )
+scale = Vector2( 0.2, 0.2 )
+
+[node name="enemic3" parent="." instance=ExtResource( 5 )]
+position = Vector2( 2768, -112 )
+scale = Vector2( 0.2, 0.2 )
+
+[node name="enemic4" parent="." instance=ExtResource( 5 )]
+position = Vector2( 4648, 80 )
+scale = Vector2( 0.2, 0.2 )
+
+[node name="enemic5" parent="." instance=ExtResource( 5 )]
+position = Vector2( 6952, -320 )
+scale = Vector2( 0.2, 0.2 )
+
+[node name="enemic_v2_1" parent="." instance=ExtResource( 9 )]
+position = Vector2( 2040, -96 )
+scale = Vector2( 0.198619, 0.203707 )
+
+[node name="enemic_v2_2" parent="." instance=ExtResource( 9 )]
+position = Vector2( 3192, -56 )
+scale = Vector2( 0.198619, 0.203707 )
+
+[node name="enemic_v2_3" parent="." instance=ExtResource( 9 )]
+position = Vector2( 3952, 96 )
+scale = Vector2( 0.198619, 0.203707 )
+
+[node name="enemic_v2_4" parent="." instance=ExtResource( 9 )]
+position = Vector2( 6232, -200 )
+scale = Vector2( 0.198619, 0.203707 )
+
+[node name="ParallaxBackground" parent="." instance=ExtResource( 4 )]
